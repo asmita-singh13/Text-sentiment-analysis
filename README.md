@@ -1,4 +1,4 @@
-# Sentiment Analysis Web Application
+# Text Sentiment Analysis Web App
 
 This project is a simple sentiment analysis web application built using Streamlit. It leverages two powerful Natural Language Processing (NLP) techniques — TextBlob for basic sentiment analysis and VADER Sentiment for token-level sentiment analysis.
 
