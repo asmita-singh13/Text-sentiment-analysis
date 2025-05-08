@@ -1,80 +1,58 @@
-# Sentio-Sentiment-Analysis-Model
+# Sentiment Analysis Web Application
 
-
-# Sentiment Analysis NLP App
-
-## Overview
-This project is a simple sentiment analysis web application built with Streamlit. It uses **TextBlob** for basic sentiment analysis (polarity and subjectivity) and **VADER Sentiment** to analyze the sentiment of individual tokens (words) in a given text.
+This project is a simple sentiment analysis web application built using Streamlit. It leverages two powerful Natural Language Processing (NLP) techniques — TextBlob for basic sentiment analysis and VADER Sentiment for token-level sentiment analysis.
 
 ## Features
-- **TextBlob Sentiment**: Provides overall sentiment analysis (polarity and subjectivity).
-- **VADER Sentiment**: Analyzes the sentiment of individual words in the text, categorizing them as positive, negative, or neutral based on their sentiment score.
-- **Visualization**: Displays the sentiment data using a bar chart for a visual understanding of the sentiment analysis.
+- **TextBlob Sentiment Analysis**: Provides an overall sentiment analysis with two key metrics:
+  - **Polarity**: Indicates the positivity (positive value) or negativity (negative value) of the text.
+  - **Subjectivity**: Measures how subjective the text is (closer to 1 is more subjective).
+- **VADER Token-Level Analysis**: Analyzes individual words (tokens) in the text, classifying them as positive, negative, or neutral based on their sentiment score.
+- **Interactive Visualization**: Displays a bar chart showing the sentiment score for each word, providing a clear view of the text's sentiment distribution.
 
 ## Technologies Used
-- **Streamlit**: For building the interactive web application.
-- **TextBlob**: For performing overall sentiment analysis (polarity and subjectivity).
-- **VADER Sentiment**: For token-level sentiment analysis.
-- **Pandas**: For data manipulation and handling.
-- **Altair**: For visualizing sentiment data.
-- **Polarity**: It determines whether the input text is positive, negative, or neutral.
-- **Subjectivity** : It helps differentiate opinions from facts in the text. 
-
-## Requirements
-- Python 3.x
-- The following Python libraries:
-  - Streamlit
-  - TextBlob
-  - Pandas
-  - Altair
-  - VaderSentiment
+- **Streamlit**: For creating an interactive web application.
+- **TextBlob**: For overall sentiment analysis (polarity and subjectivity).
+- **VADER Sentiment Analyzer**: For token-level sentiment analysis.
+- **Pandas**: For data handling and manipulation.
+- **Altair**: For creating dynamic data visualizations.
 
 ## Installation
-To set up this project locally, follow these steps:
-
-1. Clone the repository or download the project files.
-   
+1. Clone this repository to your local machine.
 2. Install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the Streamlit app:
-    ```bash
-    streamlit run app.py
-    ```
-
-4. Open your browser and navigate to `http://localhost:8501` to use the app.
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Streamlit app using the command:
+   ```bash
+   streamlit run app.py
+   ```
+4. The app will be accessible at `http://localhost:8501`.
 
 ## How to Use
-1. On the "Home" page, enter a block of text into the provided text area.
-2. Click "Analyze" to get the sentiment analysis results.
-3. The app will display:
-   - **Overall Sentiment**: A general sentiment (positive, negative, or neutral).
-   - **Token Sentiment**: Sentiment analysis for each word in the input text, categorized as positive, negative, or neutral.
-   - **Visualization**: A bar chart visualizing sentiment metrics (polarity and subjectivity).
+- Navigate to the "Home" page.
+- Enter text in the provided text area.
+- Click "Analyze".
+- The app will display:
+  - Overall sentiment (Polarity and Subjectivity) using TextBlob.
+  - Token-wise sentiment analysis with VADER.
+  - A bar chart showing sentiment scores for each word.
 
-## About
-This app serves as a demonstration of basic NLP (Natural Language Processing) techniques for sentiment analysis. It combines different libraries like TextBlob and VADER to provide both a high-level and a token-level sentiment analysis.
+## About Sentiment Analysis
+Sentiment Analysis is a branch of NLP focused on determining the sentiment expressed in text data. It helps classify text as positive, negative, or neutral. This can be useful for analyzing customer reviews, social media posts, feedback, and much more.
 
-# what is Sentiment Analysis
-Sentiment analysis is a branch of Natural Language Processing (NLP) that focuses on identifying and classifying the sentiment expressed in text data. It determines whether the sentiment behind a piece of text is positive, negative, or neutral (or sometimes more granular emotions like joy, anger, sadness, etc.).
+### How It Works
+1. **Text Preprocessing**:
+   - The text is split into individual words (tokens).
+   - Each word is analyzed for sentiment using VADER.
 
-How Sentiment Analysis Works
-Text Preprocessing:
+2. **Sentiment Calculation**:
+   - TextBlob provides an overall sentiment score (polarity and subjectivity).
+   - VADER provides a score for each word, categorized as positive, negative, or neutral.
 
-Remove noise (e.g., punctuation, special characters, stop words, etc.).
-Tokenization (breaking the text into smaller units like words or sentences).
-Lemmatization or stemming (reducing words to their base/root form).
-Feature Extraction:
+3. **Visualization**:
+   - The results are displayed as a DataFrame and visualized using a bar chart for clear understanding.
 
-Bag of Words (BoW): Representing text data as a matrix of word occurrences.
-TF-IDF: Measures how important a word is in the text relative to the dataset.
-Word Embeddings: Representing words in a continuous vector space (e.g., Word2Vec, GloVe, BERT).
-Sentiment Detection:
-
-Rule-Based Systems: Uses predefined dictionaries of words with associated sentiments.
-Machine Learning Models: Supervised models trained on labeled datasets (e.g., Logistic Regression, SVM, Random Forest, or advanced neural networks).
-Deep Learning Models: Models like RNNs, LSTMs, or transformers (e.g., BERT) for contextual understanding.
-
-
+## Why Use This Application?
+- Easy to use, with a clean UI built using Streamlit.
+- Combines two powerful NLP techniques for comprehensive sentiment analysis.
+- Suitable for quick sentiment analysis of text data without complex setup.
